@@ -286,8 +286,8 @@ var (
 
 	// prebuilts/clang default settings.
 	ClangDefaultBase         = "prebuilts/clang/host"
-	ClangDefaultVersion      = "clang-r450784d"
-	ClangDefaultShortVersion = "14.0.6"
+	ClangDefaultVersion      = "clang-neutron"
+	ClangDefaultShortVersion = "18.0.0"
 
 	// Directories with warnings from Android.bp files.
 	WarningAllowedProjects = []string{
@@ -402,8 +402,8 @@ func init() {
 	// These are tied to the version of LLVM directly in external/llvm, so they might trail the host prebuilts
 	// being used for the rest of the build process.
 	pctx.SourcePathVariable("RSClangBase", "prebuilts/clang/host")
-	pctx.SourcePathVariable("RSClangVersion", "clang-r450784d")
-	pctx.SourcePathVariable("RSReleaseVersion", "14.0.6")
+	pctx.SourcePathVariable("RSClangVersion", "clang-neutron")
+	pctx.SourcePathVariable("RSReleaseVersion", "18.0.0")
 	pctx.StaticVariable("RSLLVMPrebuiltsPath", "${RSClangBase}/${HostPrebuiltTag}/${RSClangVersion}/bin")
 	pctx.StaticVariable("RSIncludePath", "${RSLLVMPrebuiltsPath}/../lib64/clang/${RSReleaseVersion}/include")
 
